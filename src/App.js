@@ -9,6 +9,7 @@ function App() {
   const [home_score, setHomeScore] = useState(0);
   const [away_score, setAwayScore] = useState(0);
 
+
   const homeTouchdown = e => {
     setHomeScore(home_score + 7);
   };
@@ -21,6 +22,17 @@ function App() {
   const awayFieldGoal = e => {
     setAwayScore(away_score + 3);
   };
+
+//test
+  const [quarter, setQuarter] = useState(1);
+
+  const changeQuarter = e => {
+    if (quarter < 4) {
+      setQuarter(quarter + 1)
+    } else {
+      setQuarter(1);
+    }
+  }
 
   return (
     <div className="container">
